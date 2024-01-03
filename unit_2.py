@@ -65,3 +65,36 @@
 # for i in range(1, n + 1):
 #     num = (num + k) % i
 # print(num + 1)
+
+
+# -------- Координатные четверти  ---------
+
+# n = int(input())
+# first = 0
+# second = 0
+# third = 0
+# fourth = 0
+# for i in range(n):
+#     x, y = map(int, input().split())
+#     if x > 0 and y > 0:
+#         first += 1
+#     elif x < 0 and y > 0:
+#         second += 1
+#     elif x < 0 and y < 0:
+#         third += 1
+#     elif x > 0 and y < 0:
+#         fourth += 1
+# print(f'''Первая четверть: {first}
+# Вторая четверть: {second}
+# Третья четверть: {third}
+# Четвертая четверть: {fourth}''')
+
+
+# -------- Больше предыдущего  ---------
+
+# lst = list(map(int, input().split()))
+# count = 0
+# for i in range(1, len(lst)):
+#     if lst[i] > lst[i-1]:
+#         count += 1
+# print(count)
