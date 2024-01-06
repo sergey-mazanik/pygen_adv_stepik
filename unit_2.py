@@ -90,7 +90,7 @@
 # Четвертая четверть: {fourth}''')
 
 
-# -------- Больше предыдущего  ---------
+# -------- Больше предыдущего ---------
 
 # lst = list(map(int, input().split()))
 # count = 0
@@ -98,3 +98,17 @@
 #     if lst[i] > lst[i-1]:
 #         count += 1
 # print(count)
+
+
+# -------- Назад, вперёд и наоборот ---------
+
+# lst = list(map(int, input().split()))
+# for i in range(0, len(lst) - 1, 2):
+#     lst[i], lst[i + 1] = lst[i + 1], lst[i]
+# print(*lst)
+
+
+# -------- Сдвиг в развитии ---------
+
+# lst = list(map(int, input().split()))
+# print(lst[-1], *lst[:-1])
