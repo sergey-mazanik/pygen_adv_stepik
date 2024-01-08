@@ -112,3 +112,97 @@
 
 # lst = list(map(int, input().split()))
 # print(lst[-1], *lst[:-1])
+
+
+# -------- Различные элементы ---------
+
+# lst = list(map(int, input().split()))
+# lst_avg = []
+# for i in range(len(lst)):
+#     if lst[i] not in lst_avg:
+#         lst_avg.append(lst[i])
+# print(len(lst_avg))
+
+
+# -------- Произведение чисел ---------
+
+# n = int(input())
+# lst = []
+# for i in range(n):
+#     lst.append(int(input()))
+# multi = int(input())
+# flag = False
+# for i in range(len(lst)):
+#     for j in range(len(lst)):
+#         if i != j:
+#             if lst[i] * lst[j] == multi:
+#                 flag = True
+# print('ДА' if flag else 'НЕТ')
+
+
+# -------- Камень, ножницы, бумага ---------
+
+# tim = input()
+# rus = input()
+# k = 'камень'
+# n = 'ножницы'
+# b = 'бумага'
+# if tim == rus:
+#     print('ничья')
+# elif (tim == k and rus == n) or (tim == n and rus == b) or (tim == b and rus == k):
+#     print('Тимур')
+# elif (tim == k and rus == b) or (tim == n and rus == k) or (tim == b and rus == n):
+#     print('Руслан')
+
+# -------- Камень, ножницы, бумага, ящерица, Спок ---------
+
+# a, b = input(), input()
+# mass = ['ножницыбумага', 'ножницыящерица', 'бумагакамень', 'бумагаСпок', 'каменьящерица', 'каменьножницы',
+#         'ящерицаСпок', 'ящерицабумага', 'Спокножницы', 'Споккамень']
+# if a == b:
+#     print('ничья')
+# elif a + b in mass:
+#     print('Тимур')
+# else:
+#     print('Руслан')
+
+
+# -------- Орел и решка ---------
+
+# lst = list(map(str, input().split('О')))
+# print(len(max(lst)))
+
+
+# -------- Кремниевая долина ---------
+# n = int(input())
+# line_number = 0
+# count = 0
+# lst = []
+# for i in range(n):
+#     line_number += 1
+#     line = input()
+#     first_letter = line.find('a')
+#     second_letter = line.find('n', first_letter)
+#     third_letter = line.find('t', second_letter)
+#     forth_letter = line.find('o', third_letter)
+#     fifth_letter = line.find('n', forth_letter)
+#     if line[first_letter] == 'a' and line[second_letter] == 'n' and line[third_letter] == 't' and line[
+#         forth_letter] == 'o' and line[fifth_letter] == 'n':
+#         lst.append(line_number)
+# print(*lst)
+
+
+# -------- Роскомнадзор запретил букву а ---------
+
+# name = input()
+# s = name + ' запретил букву'
+# alphabet = ['а', 'б', 'в', 'г', 'д', 'е', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф',
+#             'х', 'ц',
+#             'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я']
+# for i in range(len(alphabet)):
+#     letter = alphabet[i]
+#     if letter in s:
+#         if i != '':
+#             print(s, end=' ')
+#         s = s.replace(letter, '').replace('  ', ' ').strip()
+#         print(letter)
