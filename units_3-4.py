@@ -1,4 +1,4 @@
-# -------- Предикат делимости --------
+''' -------- Предикат делимости -------- '''
 # def func(num1, num2):
 #     return 'делится' if num1 % num2 == 0 else 'не делится'
 #
@@ -67,3 +67,43 @@ list1 = [[8, 7, 1], [102, 7, 9], [105, 106, 102], [103, 98, 99, 100], [3, 2, 1]]
 #     total += sum(i)
 #     counter += len(i)
 # print(total / counter)
+
+
+''' -------- Список по образцу 1 -------- '''
+
+# n = int(input())
+# for _ in range(n):
+#     lst1 = []
+#     for j in range(1, n + 1):
+#         lst1.append(j)
+#     print(lst1)
+
+
+''' -------- Список по образцу 2 -------- '''
+
+# n = int(input())
+# for i in range(1, n + 1):
+#     print(list(range(1, i + 1)))
+
+
+# n = int(input())
+# s = []
+# for i in range(1, n+1):
+#     new_list = list()
+#     for j in range(1, i+1):
+#         new_list.append(j)
+#     s.append(new_list)
+# print(*s, sep="\n")
+
+''' Треугольник Паскаля 1 '''
+
+# n = int(input())
+# triangle = []
+#
+# for i in range(n + 1):
+#     triangle.append([1] + [0] * n)
+#
+# for i in range(1, n + 1):
+#     for j in range(1, n + 1):
+#         triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j]
+# print(triangle[n])
