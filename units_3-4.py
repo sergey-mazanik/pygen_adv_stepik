@@ -107,3 +107,25 @@ list1 = [[8, 7, 1], [102, 7, 9], [105, 106, 102], [103, 98, 99, 100], [3, 2, 1]]
 #     for j in range(1, n + 1):
 #         triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j]
 # print(triangle[n])
+
+
+''' Треугольник Паскаля 2 '''
+
+
+# def pascal_triangle(num):
+#     lst = [[] for i in range(num)]
+#     for i in range(num):
+#         for j in range(i + 1):
+#             if j < i:
+#                 if j == 0:
+#                     lst[i].append(1)
+#                 else:
+#                     lst[i].append(lst[i - 1][j] + lst[i - 1][j - 1])
+#             elif j == i:
+#                 lst[i].append(1)
+#     return lst
+#
+#
+# lst = pascal_triangle(int(input()))
+# for i in lst:
+#     print(*i)
