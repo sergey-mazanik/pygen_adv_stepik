@@ -129,3 +129,44 @@ list1 = [[8, 7, 1], [102, 7, 9], [105, 106, 102], [103, 98, 99, 100], [3, 2, 1]]
 # lst = pascal_triangle(int(input()))
 # for i in lst:
 #     print(*i)
+
+
+''' Упаковка дубликатов '''
+
+# lst1 = []
+# lst2 = []
+# for i in input().split():
+#     if len(lst2) == 0:
+#         lst2.append(i)
+#     else:
+#         if lst2[-1] == i:
+#             lst2.append(i)
+#         else:
+#             lst1.append(lst2)
+#             lst2 = []
+#             lst2.append(i)
+# if len(lst2) != 0:
+#     lst1.append(lst2)
+# print(lst1)
+
+
+''' Разбиение на чанки '''
+
+# lst = input().split()
+# n = int(input())
+# lst1 = []
+# for i in range(0, len(lst), n):
+#     lst1.append(lst[i:i + n])
+# print(lst1)
+
+
+''' Подсписки списка '''
+
+# lst = input().split()
+# lst1, lst2 = [], []
+# for i in range(0, len(lst)):
+#     for j in range(0, len(lst)):
+#         lst1 = lst[j:i + j + 1]
+#         if len(lst1) == i + 1:
+#             lst2.append(lst1)
+# print([[]] + lst2[::1])
