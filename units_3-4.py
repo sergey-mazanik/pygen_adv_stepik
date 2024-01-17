@@ -111,7 +111,6 @@ list1 = [[8, 7, 1], [102, 7, 9], [105, 106, 102], [103, 98, 99, 100], [3, 2, 1]]
 
 ''' Треугольник Паскаля 2 '''
 
-
 # def pascal_triangle(num):
 #     lst = [[] for i in range(num)]
 #     for i in range(num):
@@ -170,3 +169,201 @@ list1 = [[8, 7, 1], [102, 7, 9], [105, 106, 102], [103, 98, 99, 100], [3, 2, 1]]
 #         if len(lst1) == i + 1:
 #             lst2.append(lst1)
 # print([[]] + lst2[::1])
+
+
+''' Вывести матрицу 1 '''
+
+# n = int(input())
+# m = int(input())
+# lst_final = []
+# for i in range(n):
+#     lst = []
+#     for j in range(m):
+#         lst.append(input())
+#     lst_final.append(lst)
+# for i in lst_final:
+#     print(*i)
+
+
+''' Вывести матрицу 2 '''
+
+# n, m = int(input()), int(input())
+# matrix = []
+#
+# for i in range(n):
+#     row = []
+#     for j in range(m):
+#         row.append(input())
+#     matrix.append(row)
+#
+# for i in range(n):
+#     for j in range(m):
+#         print(matrix[i][j], end=' ')
+#     print()
+# print()
+# for i in range(m):
+#     for j in range(n):
+#         print(matrix[j][i], end=' ')
+#     print()
+
+
+''' След матрицы '''
+
+# n = int(input())
+# matrix = []
+# summa = 0
+# for i in range(n):
+#     temp = [int(num) for num in input().split()]
+#     matrix.append(temp)
+#
+# for i in range(n):
+#     summa += matrix[i][i]
+# print(summa)
+
+
+''' Больше среднего '''
+
+# n = int(input())
+# matrix = []
+# for i in range(n):
+#     temp = [int(num) for num in input().split()]
+#     matrix.append(temp)
+#
+# for i in matrix:
+#     avg = sum(i) / len(i)
+#     count = 0
+#     for j in i:
+#         if j > avg:
+#             count += 1
+#     print(count)
+
+
+''' Максимальный в области 1 '''
+
+# n = int(input())
+# matrix = []
+# for i in range(n):
+#     temp = [int(num) for num in input().split()]
+#     matrix.append(temp)
+#
+# lst = []
+# for row in range(n):
+#     for col in range(n):
+#         if row >= col:
+#             lst.append(matrix[row][col])
+# print(max(lst))
+
+
+''' Максимальный в области 2 '''
+
+# n = int(input())
+# matrix = []
+# for i in range(n):
+#     temp = [int(num) for num in input().split()]
+#     matrix.append(temp)
+#
+# lst = []
+# for row in range(n):
+#     for col in range(n):
+#         if row == col or col == n - row - 1:
+#             lst.append(matrix[row][col])
+#         elif ((row > col) and (row < n - 1 - col)) or ((row < col) and (row > n - 1 - col)):
+#             lst.append(matrix[row][col])
+# print(max(lst))
+
+
+''' Суммы четвертей '''
+
+# n = int(input())
+# matrix = []
+# for i in range(n):
+#     temp = [int(num) for num in input().split()]
+#     matrix.append(temp)
+#
+# lst_up = []
+# lst_down = []
+# lst_left = []
+# lst_right = []
+# for row in range(n):
+#     for col in range(n):
+#         if (row > col) and (row < n - 1 - col):
+#             lst_left.append(matrix[row][col])
+#         elif (row < col) and (row > n - 1 - col):
+#             lst_right.append(matrix[row][col])
+#         elif (row > col) and (row > n - 1 - col):
+#             lst_down.append(matrix[row][col])
+#         elif (row < col) and (row < n - 1 - col):
+#             lst_up.append(matrix[row][col])
+# print(f'''Верхняя четверть: {sum(lst_up)}
+# Правая четверть: {sum(lst_right)}
+# Нижняя четверть: {sum(lst_down)}
+# Левая четверть: {sum(lst_left)}
+# ''')
+
+
+''' Таблица умножения '''
+
+# n = int(input())
+# m = int(input())
+# mult = []
+# for row in range(n):
+#     lst_col = []
+#     for col in range(m):
+#         lst_col.append(str(row * col).ljust(3))
+#     mult.append(lst_col)
+# for i in mult:
+#     print(*i)
+
+
+''' Максимум в таблице '''
+
+# n = int(input())
+# m = int(input())
+# mult = []
+# for _ in range(n):
+#     mult.append(input().split())
+#
+# maximum = int(mult[0][0])
+# for row in range(n):
+#     for col in range(m):
+#         if int(mult[row][col]) > maximum:
+#             maximum = int(mult[row][col])
+#
+# for row in range(n):
+#     for col in range(m):
+#         if int(mult[row][col]) == maximum:
+#             print(row, col)
+#             quit()
+
+
+''' Обмен столбцов '''
+
+# n, m = int(input()), int(input())
+# mult = []
+# for _ in range(n):
+#     mult.append(input().split())
+# i, j = list(map(int, input().split()))
+#
+# for k in range(len(mult)):
+#     mult[k][i], mult[k][j] = mult[k][j], mult[k][i]
+#
+# for i in mult:
+#     print(*i)
+
+
+''' Симметричная матрица '''
+
+# n = int(input())
+# matrix = []
+# for i in range(n):
+#     temp = [int(num) for num in input().split()]
+#     matrix.append(temp)
+#
+# res = 'YES'
+# for row in range(n):
+#     for col in range(n):
+#         if row != col:
+#             if matrix[row][col] != matrix[col][row]:
+#                 res = 'NO'
+#                 break
+# print(res)
