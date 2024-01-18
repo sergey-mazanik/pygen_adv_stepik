@@ -367,3 +367,18 @@ list1 = [[8, 7, 1], [102, 7, 9], [105, 106, 102], [103, 98, 99, 100], [3, 2, 1]]
 #                 res = 'NO'
 #                 break
 # print(res)
+
+
+''' Обмен диагоналей '''
+
+# n = int(input())
+# matrix = []
+# for i in range(n):
+#     temp = [int(num) for num in input().split()]
+#     matrix.append(temp)
+#
+# for i in range(n):
+#     matrix[i][i], matrix[n - i - 1][i] = matrix[n - i - 1][i], matrix[i][i]
+#
+# for i in range(n):
+#     print(*matrix[i])
