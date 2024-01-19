@@ -382,3 +382,102 @@ list1 = [[8, 7, 1], [102, 7, 9], [105, 106, 102], [103, 98, 99, 100], [3, 2, 1]]
 #
 # for i in range(n):
 #     print(*matrix[i])
+
+
+''' Зеркальное отображение '''
+
+# n = int(input())
+# matrix = []
+# for i in range(n):
+#     temp = [int(num) for num in input().split()]
+#     matrix.append(temp)
+#
+# for i in matrix[::-1]:
+#     print(*i)
+
+
+''' Поворот матрицы '''
+
+# n = int(input())
+# matrix = []
+# for i in range(n):
+#     temp = [int(num) for num in input().split()]
+#     matrix.append(temp)
+#
+# new_matrix = []
+# for col in range(n):
+#     new_row = []
+#     for row in range(n):
+#         new_row.append(matrix[row][col])
+#     new_matrix.append(new_row)
+#
+# for i in range(n):
+#     print(*new_matrix[i][::-1])
+
+
+''' Ходы коня '''
+
+# start = input()
+# matrix = [['.' for _ in range(8)] for _ in range(8)]  # b6
+# pos_x, pos_y = 8-int(start[1]), ord(start[0])-97
+# matrix[pos_x][pos_y] = 'N'
+#
+# for r in range(8):
+#     for c in range(8):
+#         if (r == pos_x + 2 or r == pos_x - 2) and (c == pos_y + 1 or c == pos_y - 1):
+#             matrix[r][c] = '*'
+#         if (r == pos_x + 1 or r == pos_x - 1) and (c == pos_y + 2 or c == pos_y - 2):
+#             matrix[r][c] = '*'
+#
+# for i in range(8):
+#     print(*matrix[i])
+
+
+''' Магический квадрат '''
+
+# n = int(input())
+# check_values = list(range(1, n ** 2 + 1))
+# matrix = []
+# for i in range(n):
+#     temp = [int(num) for num in input().split()]
+#     matrix.append(temp)
+#
+# lst = []
+# for r in range(n):
+#     for c in range(n):
+#         lst.append(matrix[r][c])
+# lst = sorted(lst)
+#
+# if check_values != lst:
+#     print('NO')
+#     quit()
+#
+# rows_sum = []
+# for row in matrix:
+#     rows_sum.append(sum(row))
+# for i in range(len(rows_sum)-1):
+#     if rows_sum[i] != rows_sum[i + 1]:
+#         print('NO')
+#         quit()
+#
+# col_sum = []
+# for r in range(n):
+#     col_lst = []
+#     for c in range(n):
+#         col_lst.append(matrix[c][r])
+#     col_sum.append(sum(col_lst))
+# for i in range(len(col_sum)-1):
+#     if col_sum[i] != col_sum[i + 1]:
+#         print('NO')
+#         quit()
+#
+# main_dia_value = []
+# sec_dia_value = []
+# for i in range(n):
+#     main_dia_value.append(matrix[i][i])
+#     sec_dia_value.append(matrix[i][n - i - 1])
+# if sum(main_dia_value) != sum(sec_dia_value):
+#     print('NO')
+#     quit()
+#
+# print('YES')
