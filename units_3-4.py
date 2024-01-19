@@ -481,3 +481,44 @@ list1 = [[8, 7, 1], [102, 7, 9], [105, 106, 102], [103, 98, 99, 100], [3, 2, 1]]
 #     quit()
 #
 # print('YES')
+
+
+''' Шахматная доска '''
+
+# n, m = list(map(int, input().split()))
+# matrix = []
+#
+# for i in range(n):
+#     row = []
+#     for j in range(m):
+#         row.append('.')
+#     matrix.append(row)
+#
+# for r in range(n):
+#     for c in range(m):
+#         if (r + c) % 2:
+#             matrix[r][c] = '*'
+#
+# for i in matrix:
+#     print(*i)
+
+
+''' Побочная диагональ '''
+
+# n = int(input())
+# matrix = []
+#
+# for i in range(n):
+#     temp = [0 for num in range(n)]
+#     matrix.append(temp)
+#
+# for r in range(n):
+#     # row = []
+#     for c in range(n):
+#         if r + c == n - 1:
+#             matrix[r][c] = 1
+#         elif r + c >= n:
+#             matrix[r][c] = 2
+#
+# for i in matrix:
+#     print(*i)
