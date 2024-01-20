@@ -522,3 +522,19 @@ list1 = [[8, 7, 1], [102, 7, 9], [105, 106, 102], [103, 98, 99, 100], [3, 2, 1]]
 #
 # for i in matrix:
 #     print(*i)
+
+
+''' Заполнение 1 '''
+
+# n, m = list(map(int, input().split()))
+# matrix = []
+# lst = [i for i in range(1, (n * m + 1))]
+# for i in range(n):
+#     row = []
+#     while len(row) < m:
+#         for j in range(m):
+#             row.append(str(lst.pop(0)).ljust(3))
+#         matrix.append(row)
+#
+# for i in matrix:
+#     print(*i)
