@@ -538,3 +538,57 @@ list1 = [[8, 7, 1], [102, 7, 9], [105, 106, 102], [103, 98, 99, 100], [3, 2, 1]]
 #
 # for i in matrix:
 #     print(*i)
+
+
+''' Заполнение 2 '''
+
+# n, m = [int(i) for i in input().split()]
+# matrix = [[0] * m for _ in range(n)]
+#
+# for i in range(n):
+#     for j in range(m):
+#         matrix[i][j] = i + j * n + 1
+#
+# for i in range(n):
+#     for j in range(m):
+#         print(str(matrix[i][j]).ljust(3), end=' ')
+#     print()
+
+
+''' Заполнение 3 '''
+
+# n = int(input())
+# matrix = []
+#
+# for i in range(n):
+#     temp = [0 for j in range(n)]
+#     matrix.append(temp)
+#
+# for r in range(n):
+#     matrix[r][r] = 1
+#     matrix[r][n - r - 1] = 1
+#
+# for i in range(n):
+#     for j in range(n):
+#         print(str(matrix[i][j]).ljust(3), end=' ')
+#     print()
+
+
+''' Заполнение 4 '''
+
+# n = int(input())
+# matrix = []
+#
+# for i in range(n):
+#     temp = [0 for j in range(n)]
+#     matrix.append(temp)
+#
+# for i in range(n):
+#     for j in range(n):
+#         if i <= j and i <= n - 1 - j or i >= j and i >= n - 1 - j:
+#             matrix[i][j] = 1
+#
+# for i in range(n):
+#     for j in range(n):
+#         print(str(matrix[i][j]).ljust(3), end=' ')
+#     print()
