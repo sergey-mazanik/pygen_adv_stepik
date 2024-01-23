@@ -592,3 +592,94 @@ list1 = [[8, 7, 1], [102, 7, 9], [105, 106, 102], [103, 98, 99, 100], [3, 2, 1]]
 #     for j in range(n):
 #         print(str(matrix[i][j]).ljust(3), end=' ')
 #     print()
+
+
+''' Заполнение 5 '''
+
+# n, m = [int(i) for i in input().split()]
+# matrix = [[0] * m for _ in range(n)]
+#
+# for i in range(n):
+#     for j in range(m):
+#         matrix[i][j] = (i + j) % m + 1
+#
+# for i in range(n):
+#     for j in range(m):
+#         print(str(matrix[i][j]).ljust(3), end=' ')
+#     print()
+
+
+''' Заполнение змейкой '''
+
+# n, m = list(map(int, input().split()))
+# matrix = []
+# lst = [i for i in range(1, (n * m + 1))]
+# for i in range(n):
+#     row = []
+#     while len(row) < m:
+#         for j in range(m):
+#             row.append(str(lst.pop(0)).ljust(3))
+#         matrix.append(row)
+#
+# for i in range(len(matrix)):
+#     if i % 2 != 0:
+#         matrix[i].reverse()
+#
+# for i in matrix:
+#     print(*i)
+
+
+''' Заполнение диагоналями '''
+
+# n, m = [int(i) for i in input().split()]
+# matrix = [[0] * m for _ in range(n)]
+# start_int = 1
+# for j in range(m + n -1):
+#     for i in range(n):
+#         if j - i in range(m):
+#             matrix[i][j-i] = start_int
+#             start_int += 1
+#
+# for i in range(n):
+#     for j in range(m):
+#         print(str(matrix[i][j]).ljust(3), end=' ')
+#     print()
+
+
+''' Заполнение спиралью  '''
+
+# n, m = map(int, input().split())
+#
+# i = 0
+# j = 0
+# cnt = 1
+#
+# a = [[0 for _ in range(m)] for _ in range(n)]
+#
+# while cnt < m * n:
+#     while j < m - 1 and a[i][j + 1] == 0:
+#         a[i][j] = cnt
+#         j += 1
+#         cnt += 1
+#
+#     while i < n - 1 and a[i + 1][j] == 0:
+#         a[i][j] = cnt
+#         i += 1
+#         cnt += 1
+#
+#     while j > 0 and a[i][j - 1] == 0:
+#         a[i][j] = cnt
+#         j -= 1
+#         cnt += 1
+#
+#     while i > 0 and a[i - 1][j] == 0:
+#         a[i][j] = cnt
+#         i -= 1
+#         cnt += 1
+#
+# a[i][j] = cnt
+#
+# for i in range(n):
+#     for j in range(m):
+#         print(str(a[i][j]).ljust(3), end=' ')
+#     print()
