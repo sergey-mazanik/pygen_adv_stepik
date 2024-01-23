@@ -683,3 +683,61 @@ list1 = [[8, 7, 1], [102, 7, 9], [105, 106, 102], [103, 98, 99, 100], [3, 2, 1]]
 #     for j in range(m):
 #         print(str(a[i][j]).ljust(3), end=' ')
 #     print()
+
+
+''' Сложение матриц '''
+
+# n, m = map(int, input().split())
+# matrix_1 = [[int(i) for i in input().split()] for _ in range(n)]
+# input()
+# matrix_2 = [[int(i) for i in input().split()] for _ in range(n)]
+#
+# result_matrix = [[0] * m for _ in range(n)]
+# for i in range(n):
+#     for j in range(m):
+#         result_matrix[i][j] = matrix_1[i][j] + matrix_2[i][j]
+#
+# for i in result_matrix:
+#     print(*i)
+
+
+''' Умножение матриц  '''
+
+# n, m = map(int, input().split())
+# matrix_1 = [[int(i) for i in input().split()] for _ in range(n)]
+# # print(n, m)
+# input()
+# m, k = map(int, input().split())
+# # print(m, k)
+# matrix_2 = [[int(i) for i in input().split()] for _ in range(m)]
+#
+# result_matrix = [[0] * k for _ in range(n)]
+#
+# for i in range(n):
+#     for j in range(k):
+#         for a in range(m):
+#             result_matrix[i][j] += matrix_1[i][a] * matrix_2[a][j]
+#
+# for i in result_matrix:
+#     print(*i)
+
+
+''' Возведение матрицы в степень '''
+
+# n = int(input())
+# matrix_1 = [[int(i) for i in input().split()] for _ in range(n)]
+# m = int(input())
+# new_matrix = list(matrix_1)
+# result_matrix = [[0] * n for _ in range(n)]
+#
+# for s in range(m - 1):
+#     for i in range(n):
+#         for j in range(n):
+#             for a in range(n):
+#                 result_matrix[i][j] += matrix_1[i][a] * new_matrix[a][j]
+#     new_matrix = result_matrix
+#     if s < m - 2:
+#         result_matrix = [[0] * n for _ in range(n)]
+#
+# for i in result_matrix:
+#     print(*i)
