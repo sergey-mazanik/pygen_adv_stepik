@@ -110,3 +110,35 @@
 #     lst.append(sum(lst1) / len(i))
 #     lst1.clear()
 # print(lst)
+
+
+""" Вершина параболы """
+
+# a, b, c = [int(input()) for _ in range(3)]
+# high = ((-b / (2 * a)), ((4 * a * c - b ** 2) / (4 * a)))
+# print(high)
+
+
+""" Конкурсный отбор """
+
+# n = int(input())
+# tpl = tuple()
+# for _ in range(n):
+#     new_tuple = tuple((input().split()),)
+#     tpl += new_tuple,
+#
+# for i in tpl:
+#     print(*i)
+# print()
+#
+# for i in tpl:
+#     if int(i[1]) > 3:
+#         print(*i)
+
+""" Последовательность Трибоначчи """
+
+# n = int(input())
+# f1, f2, f3 = 1, 1, 1
+# for i in range(n):
+#     print(f1, end=' ')
+#     f1, f2, f3 = f2, f3, f1 + f2 + f3
