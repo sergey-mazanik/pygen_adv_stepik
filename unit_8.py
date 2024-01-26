@@ -15,3 +15,32 @@
 # no_books = a - t - two_books - one_book
 #
 # print(one_book, two_books, no_books, sep='\n')
+
+# numbers = {1.414, 12.5, 3.1415, 2.718, 9.8, 1.414, 1.1618, 1.324, 2.718, 1.324}
+# print(min(numbers) + max(numbers))
+
+# numbers = {20, 6, 8, 18, 18, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 12, 8, 8, 10, 4, 2, 2, 2, 16, 20}
+# average = sum(numbers) / len(numbers)
+# print(average)
+
+# numbers = {9089, -67, -32, 1, 78, 23, -65, 99, 9089, 34, -32, 0, -67, 1, 11, 111, 111, 1, 23}
+# my_set = {i ** 2 for i in numbers}
+# print(sum(my_set))
+
+# fruits = {'apple', 'banana', 'cherry', 'avocado', 'pineapple', 'apricot', 'banana', 'avocado', 'grapefruit'}
+# for fruit in sorted(fruits, reverse=True):
+#     print(fruit)
+
+# print(len(set(input())))
+
+# str = input()
+# print('YES' if len(str) == len(set(str)) else 'NO')
+
+# str1, str2 = [input() for _ in range(2)]
+# print('YES' if len(set(str1 + str2)) == 10 else 'NO')
+
+# str1, str2 = [input() for _ in range(2)]
+# print('YES' if sorted(set(str1)) == sorted(set(str2)) else 'NO')
+
+# lst = input().split()
+# print('YES' if set(lst[0]) == set(lst[1]) == set(lst[2]) else 'NO')
