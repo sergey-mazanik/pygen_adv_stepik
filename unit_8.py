@@ -44,3 +44,25 @@
 
 # lst = input().split()
 # print('YES' if set(lst[0]) == set(lst[1]) == set(lst[2]) else 'NO')
+
+# lst = []
+# for i in range(int(input())):
+#     lst.append(len(set(input().lower())))
+# print(*lst, sep='\n')
+
+# my_set = set()
+# for _ in range(int(input())):
+#     my_set.update(input().lower())
+# print(len(my_set))
+
+# words = [word.lower().strip('.,;:-?!') for word in input().split()]
+# print(len(set(words)))
+
+# lst = list(map(int, input().split()))
+# my_set = set()
+# for i in lst:
+#     if i in my_set:
+#         print('YES')
+#     else:
+#         print('NO')
+#         my_set.add(i)
