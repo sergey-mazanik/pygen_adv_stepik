@@ -66,3 +66,27 @@
 #     else:
 #         print('NO')
 #         my_set.add(i)
+
+# lst1 = list(map(int, input().split()))
+# lst2 = list(map(int, input().split()))
+# print(len((set(lst1) & set(lst2))))
+
+# # set1 = set(int(i) for i in input().split())
+# # set2 = set(int(i) for i in input().split())
+# lst1 = list(map(int, input().split()))
+# lst2 = list(map(int, input().split()))
+# my_set = set(lst1) & set(lst2)
+# for i in sorted(my_set):
+#     print(i, end=' ')
+
+# set1 = set(int(i) for i in input().split())
+# set2 = set(int(i) for i in input().split())
+# print(*sorted(set1 - set2))
+
+# n = int(input())
+# set1 = set(input())
+# for i in range(n - 1):
+#     set1 &= set(input())
+# print(*sorted(set1))
+
+
