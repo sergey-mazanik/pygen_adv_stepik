@@ -89,4 +89,29 @@
 #     set1 &= set(input())
 # print(*sorted(set1))
 
+# print('NO' if set(input()).isdisjoint(set(input())) else 'YES')
 
+# a, b = set(input()), set(input())
+# print('YES' if a.issuperset(b) else 'NO')
+# print('YES' if set(input()).issuperset(set(input())) else 'NO')
+
+# set1 = set(int(i) for i in input().split())
+# set2 = set(int(i) for i in input().split())
+# set3 = set(int(i) for i in input().split())
+# print(*sorted((set1 & set2) - set3, reverse=True))
+
+# set1 = set(int(i) for i in input().split())
+# set2 = set(int(i) for i in input().split())
+# set3 = set(int(i) for i in input().split())
+# print(*sorted((set1 | set2 | set3) - (set1 & set3 & set2)))
+
+# set1 = set(int(i) for i in input().split())
+# set2 = set(int(i) for i in input().split())
+# set3 = set(int(i) for i in input().split())
+# print(*sorted(set3 - (set1 | set2), reverse=True))
+
+# set1 = set(int(i) for i in input().split())
+# set2 = set(int(i) for i in input().split())
+# set3 = set(int(i) for i in input().split())
+# my_set = set(range(11))
+# print(*sorted(my_set - (set1 | set2 | set3)))
