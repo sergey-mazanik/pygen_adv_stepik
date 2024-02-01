@@ -94,3 +94,87 @@
 #     if i in morse_dict:
 #         lst.append(morse_dict[i])
 # print(*lst)
+
+# result = {}
+# for i in range(1, 16):
+#     result[i] = i ** 2
+# print(result)
+
+# dict1 = {'a': 100, 'z': 333, 'b': 200, 'c': 300, 'd': 45, 'e': 98, 't': 76, 'q': 34, 'f': 90, 'm': 230}
+# dict2 = {'a': 300, 'b': 200, 'd': 400, 't': 777, 'c': 12, 'p': 123, 'w': 111, 'z': 666}
+# result = {}
+# for key in dict1.keys():
+#     if key in dict2:
+#         value = dict1[key] + dict2[key]
+#         result[key] = value
+#     else:
+#         result[key] = dict1[key]
+#
+# for key in dict2.keys():
+#     if key not in result:
+#         result[key] = dict2[key]
+# print(result)
+
+# dict1 = {'a': 100, 'z': 333, 'b': 200, 'c': 300, 'd': 45, 'e': 98, 't': 76, 'q': 34, 'f': 90, 'm': 230}
+# dict2 = {'a': 300, 'b': 200, 'd': 400, 't': 777, 'c': 12, 'p': 123, 'w': 111, 'z': 666}
+# result = dict1.copy()
+# for key, value in dict2.items():
+#     result[key] = result.get(key, 0) + value
+
+# text = 'footballcyberpunkextraterritorialityconversationalistblockophthalmoscopicinterdependencemamauserfff'
+# result = {}
+# for i in text:
+#     result[i] = result.get(i, 0) + 1
+# print(result)
+
+# s = ('orange strawberry barley gooseberry apple apricot barley currant orange melon pomegranate banana banana'
+#      ' orange barley apricot plum grapefruit banana quince strawberry barley grapefruit banana grapes melon'
+#      ' strawberry apricot currant currant gooseberry raspberry apricot currant orange lime quince grapefruit'
+#      ' barley banana melon pomegranate barley banana orange barley apricot plum banana quince lime grapefruit'
+#      ' strawberry gooseberry apple barley apricot currant orange melon pomegranate banana banana orange apricot'
+#      ' barley plum banana grapefruit banana quince currant orange melon pomegranate barley plum banana quince barley'
+#      ' lime grapefruit pomegranate barley')
+# result = {}
+# lst = []
+# for i in s.split():
+#     result[i] = result.get(i, 0) + 1
+# max_num = max(result.values())
+# for key, value in result.items():
+#     if value == max_num:
+#         lst.append(key)
+# print(min(lst))
+
+# pets = [('Hatiko', 'Parker', 'Wilson', 50),
+#         ('Rusty', 'Josh', 'King', 25),
+#         ('Fido', 'John', 'Smith', 28),
+#         ('Butch', 'Jake', 'Smirnoff', 18),
+#         ('Odi', 'Emma', 'Wright', 18),
+#         ('Balto', 'Josh', 'King', 25),
+#         ('Barry', 'Josh', 'King', 25),
+#         ('Snape', 'Hannah', 'Taylor', 40),
+#         ('Horry', 'Martha', 'Robinson', 73),
+#         ('Giro', 'Alex', 'Martinez', 65),
+#         ('Zooma', 'Simon', 'Nevel', 32),
+#         ('Lassie', 'Josh', 'King', 25),
+#         ('Chase', 'Martha', 'Robinson', 73),
+#         ('Ace', 'Martha', 'Williams', 38),
+#         ('Rocky', 'Simon', 'Nevel', 32)]
+# result = {}
+# for i in pets:
+#     result.setdefault(i[1:], []).append(i[0])
+# print(result)
+
+# lst = [i.strip('().,;:-?!') for i in input().lower().split()]
+# result = {}
+# for i in lst:
+#     result[i] = result.get(i, 0) + 1
+# min_num = 1000
+# lst_res = []
+# for key, value in sorted(result.items(), key=lambda x: x[1]):
+#     # print(f'{key}: {value}')
+#     if value <= min_num:
+#         lst_res.append(key)
+#         min_num = value
+# print(min(lst_res))
+
+
