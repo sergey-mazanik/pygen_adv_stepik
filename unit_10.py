@@ -177,4 +177,27 @@
 #         min_num = value
 # print(min(lst_res))
 
+# lst = []
+# for i in input().split():
+#     if i not in lst:
+#         print(i, end=' ')
+#     else:
+#         print(f'{i}_{lst.count(i)}', end=' ')
+#     lst.append(i)
 
+""" Словарь программиста """
+
+# n = int(input())
+# my_dict = {}
+# for i in range(n):
+#     lst = input().split(': ')
+#     my_dict[lst[0].upper()] = lst[1]
+# print(my_dict)
+#
+# m = int(input())
+# for i in range(m):
+#     s = input().upper()
+#     if s in my_dict:
+#         print(my_dict[s])
+#     else:
+#         print('Не найдено')
