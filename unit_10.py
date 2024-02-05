@@ -201,3 +201,15 @@
 #         print(my_dict[s])
 #     else:
 #         print('Не найдено')
+
+""" Анаграммы 1 """
+
+# s1, s2 = input(), input()
+# dict1 = {}
+# dict2 = {}
+# for i in s1:
+#     dict1[i] = dict1.get(i, 0) + 1
+# for i in s2:
+#     dict2[i] = dict2.get(i, 0) + 1
+#
+# print('YES' if dict1 == dict2 else 'NO')
