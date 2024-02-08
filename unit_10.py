@@ -213,3 +213,38 @@
 #     dict2[i] = dict2.get(i, 0) + 1
 #
 # print('YES' if dict1 == dict2 else 'NO')
+
+# lst1 = list(map(str, input().split()))
+# lst2 = list(map(str, input().split()))
+# dict1 = {}
+# dict2 = {}
+# for i in lst1:
+#     for j in i.lower():
+#         if j.isalpha():
+#             dict1[j.lower()] = dict1.get(j.lower(), 0) + 1
+# for i in lst2:
+#     for j in i:
+#         if j.isalpha():
+#             dict2[j.lower()] = dict2.get(j.lower(), 0) + 1
+#
+# print('YES' if dict1 == dict2 else 'NO')
+
+""" Словарь синонимов """
+
+# my_dict = {}
+# for i in range(int(input())):
+#     lst = [i for i in input().split()]
+#     my_dict[lst[0]], my_dict[lst[1]] = lst[1], lst[0]
+# print(my_dict[input()])
+
+""" Страны и города """
+
+# my_dict = {}
+# for _ in range(int(input())):
+#     lst = [i for i in input().split()]
+#     my_dict[lst[0]] = lst[1:]
+# find_city = [input() for i in range(int(input()))]
+# for i in find_city:
+#     for key, value in my_dict.items():
+#         if i in value:
+#             print(key)
