@@ -248,3 +248,46 @@
 #     for key, value in my_dict.items():
 #         if i in value:
 #             print(key)
+
+""" Телефонная книга """
+
+# my_dict = {}
+# for _ in range(int(input())):
+#     lst = [i.lower() for i in input().split()]
+#     my_dict.setdefault(lst[1], []).append(lst[0])
+# print(my_dict)
+# for _ in range(int(input())):
+#     # print(*my_dict.get(input().lower(), ['абонент не найден']))
+#     name = input().lower()
+#     if name in my_dict.keys():
+#         print(*my_dict.get(name, 'абонент не найден'))
+#     else:
+#         print('абонент не найден')
+
+""" Секретное слово """
+
+# my_str = input()
+# dict_str = {}
+# for i in my_str:
+#     dict_str[i] = dict_str.get(i, 0) + 1
+# my_dict = {}
+# for _ in range(int(input())):
+#     letter, count = input().split(': ')
+#     my_dict[count] = letter
+# new_str = ''
+# for i in my_str:
+#     n = dict_str[i]
+#     new_str += my_dict[str(n)]
+# print(new_str)
+
+# my_str = input()
+# my_dict = {}
+# for i in range(int(input())):
+#     k, v = input().split(': ')
+#     my_dict[v] = k
+# dict_str = {x: my_str.count(x) for x in my_str}
+# new_str = ''
+# for letter in my_str:
+#     n = dict_str[letter]
+#     new_str += my_dict[str(n)]
+# print(new_str)
