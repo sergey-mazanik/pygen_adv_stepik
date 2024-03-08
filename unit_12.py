@@ -57,3 +57,33 @@ import string
 #     return (choice(letter) + choice(letter) + str(choice(numbers)) + '_' + str(choice(numbers)) + choice(letter) +
 #             choice(letter))
 
+
+# from random import shuffle
+#
+# matrix = [[1, 2, 3, 4],
+#           [5, 6, 7, 8],
+#           [9, 10, 11, 12],
+#           [13, 14, 15, 16]]
+# for i in matrix:
+#     shuffle(i)
+
+
+# from random import randint
+#
+# print(*[randint(1000000, 9999999) for i in range(100)], sep='\n')
+
+
+# from random import shuffle
+#
+# word = list(input())
+# shuffle(word)
+# print(''.join(word))
+
+
+# from random import sample
+#
+# lst = list(range(1, 76))
+# numbers_list = sample(lst, 25)
+# bingo_matrix = [[str(numbers_list.pop()).ljust(3) for _ in range(5)] for _ in range(5)]
+# bingo_matrix[2][2] = str(0).ljust(3)
+# [print(*row, sep='') for row in bingo_matrix]
