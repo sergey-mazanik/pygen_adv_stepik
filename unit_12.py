@@ -87,3 +87,60 @@ import string
 # bingo_matrix = [[str(numbers_list.pop()).ljust(3) for _ in range(5)] for _ in range(5)]
 # bingo_matrix[2][2] = str(0).ljust(3)
 # [print(*row, sep='') for row in bingo_matrix]
+
+
+# from random import shuffle
+#
+# lst = [input() for _ in range(int(input()))]
+# shuffle(lst)
+# for i in range(len(lst)):
+#     print(lst[i], '-', lst[i - 1])
+
+
+# from string import ascii_letters, digits
+# from random import choice
+#
+#
+# def generate_password(length):
+#     letter = ''.join((set(ascii_letters) | set(digits)) - set('lI1oO0'))
+#     password = ''
+#     for _ in range(length):
+#         password += choice(letter)
+#     return password
+#
+#
+# def generate_passwords(count, length):
+#     for _ in range(count):
+#         print(generate_password(length))
+#
+#
+# n, m = int(input()), int(input())
+# generate_passwords(n, m)
+
+
+# from string import ascii_uppercase, ascii_lowercase, digits, ascii_letters
+# from random import choice, shuffle
+#
+# LETTER = {'EN': [x for x in ascii_uppercase if x not in 'OI'],
+#           'en': [x for x in ascii_lowercase if x not in 'ol'],
+#           'dig': [x for x in digits if x not in '01']}
+# letter = ''.join((set(ascii_letters) | set(digits)) - set('lI1oO0'))
+#
+#
+# def generate_password(length):
+#     password = choice(LETTER['EN']) + choice(LETTER['en']) + choice(LETTER['dig'])
+#     for _ in range(length - 3):
+#         password += choice(letter)
+#     password = list(password)
+#     shuffle(password)
+#     return ''.join(password)
+#
+#
+# def generate_passwords(count, length):
+#     for _ in range(count):
+#         print(generate_password(length))
+#
+#
+# n, m = int(input()), int(input())
+# generate_passwords(n, m)
+
