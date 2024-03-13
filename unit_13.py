@@ -15,3 +15,20 @@
 # lst = [D(i) for i in s.split()]
 # print(sum(lst))
 # print(*sorted(lst, reverse=True)[:5])
+
+
+# from decimal import *
+#
+# num = abs(Decimal(input()))
+# if num > 1:
+#     num_tuple = num.as_tuple()
+#     print(max(num_tuple.digits) + min(num_tuple.digits))
+# else:
+#     num_tuple = num.as_tuple()
+#     print(max(num_tuple.digits))
+
+
+# from decimal import *
+#
+# num = Decimal(input())
+# print(num.exp() + num.ln() + num.log10() + num.sqrt())
