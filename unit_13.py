@@ -67,3 +67,46 @@
 # print(f'{a} - {b} = {Fraction(a) - Fraction(b)}')
 # print(f'{a} * {b} = {Fraction(a) * Fraction(b)}')
 # print(f'{a} / {b} = {Fraction(a) / Fraction(b)}')
+
+
+# from fractions import Fraction
+#
+# n = int(input())
+# sum = 0
+# for i in range(1, n + 1):
+#     sum += Fraction(1, i ** 2)
+# print(sum)
+
+
+# from fractions import Fraction
+# from math import factorial
+#
+# n = int(input())
+# sum = 0
+# for i in range(1, n + 1):
+#     sum += Fraction(1, factorial(i))
+# print(sum)
+
+
+# from fractions import Fraction
+# from math import gcd
+#
+# n = int(input())
+# ch = n // 2
+# zn = n - ch
+# while gcd(ch, zn) != 1:
+#     ch -= 1
+#     zn += 1
+# print(Fraction(ch, zn))
+
+
+# from fractions import Fraction
+# from math import gcd
+#
+# n = int(input())
+# lst = []
+# for i in range(1, n + 1):
+#     for j in range(i + 1, n + 1):
+#         if gcd(i, j) == 1:
+#             lst.append(Fraction(i, j))
+# print(*sorted(lst), sep='\n')
