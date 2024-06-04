@@ -296,3 +296,33 @@
 # new_data.sort(key=lambda x: x[0])
 # cities = [i[0] for i in new_data]
 # print(f'Cities: {", ".join(cities)}')
+
+
+# func = lambda x: True if x % 19 == 0 or x % 13 == 0 else False
+
+
+# func = lambda x: x[0] in 'Aa' and x[-1] in 'Aa'
+
+
+# is_non_negative_num = lambda x: x.replace('.', '').isdigit() and x.count('.') < 2
+
+
+# is_num = lambda x: x.replace('.', '').replace('-', '', 1).isdigit() and x.count('.') < 2 and x.rfind('-') <= 0
+
+
+# words = ['beverage', 'monday', 'abroad', 'bias', 'abuse', 'abolish', 'abuse', 'abuse', 'bid', 'wednesday', 'able',
+#          'betray', 'accident', 'abduct', 'bigot', 'bet', 'abandon', 'besides', 'access', 'friday', 'bestow', 'abound',
+#          'absent', 'beware', 'abundant', 'abnormal', 'aboard', 'about', 'accelerate', 'abort', 'thursday', 'tuesday',
+#          'sunday', 'berth', 'beyond', 'benevolent', 'abate', 'abide', 'bicycle', 'beside', 'accept', 'berry',
+#          'bewilder', 'abrupt', 'saturday', 'accessory', 'absorb']
+# sort_word = list(sorted(filter(lambda s: len(s) == 6, words)))
+# print(' '.join(sort_word))
+
+
+# numbers = [46, 61, 34, 17, 56, 26, 93, 1, 3, 82, 71, 37, 80, 27, 77, 94, 34, 100, 36, 81, 33, 81, 66, 83, 41, 80, 80,
+#            93, 40, 34, 32, 16, 5, 16, 40, 93, 36, 65, 8, 19, 8, 75, 66, 21, 72, 32, 41, 59, 35, 64, 49, 78, 83, 27, 57,
+#            53, 43, 35, 48, 17, 19, 40, 90, 57, 77, 56, 80, 95, 90, 27, 26, 6, 4, 23, 52, 39, 63, 74, 15, 66, 29, 88, 94,
+#            37, 44, 2, 38, 36, 32, 49, 5, 33, 60, 94, 89, 8, 36, 94, 46, 33]
+# even_numbers = list(filter(lambda x: not (x % 2 != 0 and x > 47), numbers))
+# result = list(map(lambda x: x // 2 if x % 2 == 0 else x, even_numbers))
+# print(*result)
