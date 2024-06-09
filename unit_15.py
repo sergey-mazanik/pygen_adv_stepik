@@ -382,3 +382,34 @@
 #
 #
 # evaluate(list(map(int, input().split())), int(input()))
+
+
+# def ignore_command(command):
+#     ignore = ['alias', 'configuration', 'ip', 'sql', 'select', 'update', 'exec', 'del', 'truncate']
+#     return any(map(lambda x: True if x in command else False, ignore))
+#
+#
+# print(ignore_command('get ip'))
+# print(ignore_command('select all'))
+# print(ignore_command('delete'))
+# print(ignore_command('trancate'))
+
+
+# countries = ['Russia', 'USA', 'UK', 'Germany', 'France', 'India']
+# capitals = ['Moscow', 'Washington', 'London', 'Berlin', 'Paris', 'Delhi']
+# population = [145_934_462, 331_002_651, 80_345_321, 67_886_011, 65_273_511, 1_380_004_385]
+# for country, capital, population in zip(countries, capitals, population):
+#     print(f'{capital} is the capital of {country}, population equal {population} people.')
+
+
+# abscissas = list(map(float, input().split()))
+# ordinates = list(map(float, input().split()))
+# applicates = list(map(float, input().split()))
+# print(all(map(lambda x, y, z: True if x ** 2 + y ** 2 + z ** 2 <= 4 else False, abscissas, ordinates, applicates)))
+
+
+# try:
+#     ip_list = list(map(int, input().split('.')))
+#     print(all(map(lambda x: 0 <= x < 256, ip_list)))
+# except ValueError:
+#     print('False')
