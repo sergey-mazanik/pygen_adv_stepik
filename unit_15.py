@@ -370,8 +370,8 @@
 # print(*map(lambda x: 255 - x, map(int, input().split())))
 
 
-""" Значение многочлена 🌶️ """
-
+# """ Значение многочлена 🌶️ """
+#
 # from functools import reduce
 #
 #
@@ -413,3 +413,37 @@
 #     print(all(map(lambda x: 0 <= x < 256, ip_list)))
 # except ValueError:
 #     print('False')
+
+
+# """ Интересные числа """
+#
+# lst = [i for i in list(range(int(input()), int(input()) + 1)) if '0' not in str(i)]
+# result = [i for i in lst if all(map(lambda x: i % int(x) == 0, str(i)))]
+# print(*result)
+
+
+# """ Хороший пароль """
+#
+# s = input()
+# print('YES' if all([
+#     any(map(lambda x: x.isdigit(), s)),
+#     any(map(lambda x: x.islower(), s)),
+#     any(map(lambda x: x.isupper(), s))
+# ]) and len(s) >= 7 else 'NO')
+
+
+# """ Отличники """
+#
+# n = int(input())
+# flag = False
+# for i in range(n):
+#     marks = []
+#     k = int(input())
+#     for k in range(k):
+#         marks.append(input().split()[1])
+#     if '5' in marks:
+#         flag = True
+#     else:
+#         flag = False
+#         break
+# print('YES' if flag else 'NO')
