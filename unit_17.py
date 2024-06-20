@@ -106,3 +106,55 @@
 #                     digits += ' '
 #             digits += ' '
 #     print(sum(int(i) for i in digits.split()))
+
+
+# """ Статистика по файлу """
+# with open('file.txt', encoding='utf-8') as file:
+#     lines = [line.strip().split() for line in file.readlines()]
+#     count_lines = len(lines)
+#     count_words = 0
+#     count_letters = 0
+#     for line in lines:
+#         count_words += len(line)
+#         for word in line:
+#             for letter in word:
+#                 if letter.isalpha():
+#                     count_letters += 1
+#
+# print(f"""Input file contains:
+# {count_letters} letters
+# {count_words} words
+# {count_lines} lines """)
+
+
+# """ Random name and surname """
+# from random import choice
+# with open('first_names.txt', encoding='utf-8') as file_names:
+#     with open('last_names.txt', encoding='utf-8') as file_surnames:
+#         names = [line.strip() for line in file_names.readlines()]
+#         surnames = [line.strip() for line in file_surnames.readlines()]
+#         for _ in range(3):
+#             print(f'{choice(names)} {choice(surnames)}')
+
+
+# """ Необычные страны """
+# with open('files/population.txt', encoding='utf-8') as file:
+#     lines = [line.strip() for line in file.readlines()]
+#     for line in lines:
+#         line_list = line.split('\t')
+#         if line_list[0].startswith('G') and int(line_list[1]) > 500000:
+#             print(line_list[0])
+
+
+# """ CSV-файл """
+#
+# with open('data.csv', encoding='utf-8') as file:
+#     full_data = [line.strip().split(',') for line in file.readlines()]
+#
+#
+# def read_csv():
+#     result_list = []
+#     for i in range(1, len(full_data)):
+#         result_dict = {k: v for k, v in zip(full_data[0], full_data[i])}
+#         result_list.append(result_dict)
+#     return result_list
