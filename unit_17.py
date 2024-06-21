@@ -161,5 +161,48 @@
 
 
 # """ Входная строка """
-# with open('test.txt', 'w', encoding='utf-8') as file:
+# with open('output.txt', 'w', encoding='utf-8') as file:
 #     file.write(input())
+
+
+# """ Случайные числа """
+# from random import randint
+#
+#
+# with open('random.txt', 'a', encoding='utf-8') as file:
+#     random_numbers = [str(randint(111, 777)) + '\n' for _ in range(25)]
+#     file.writelines(random_numbers)
+
+
+# """ Нумерация строк """
+# with open('input.txt', encoding='utf-8') as input_file, open('output.txt', 'a', encoding='utf-8') as output_file:
+#     input_lines = [line.strip() for line in input_file.readlines()]
+#     for count, line in enumerate(input_lines, start=1):
+#         print(f'{count}) {line}', file=output_file)
+
+
+# """ Подарок на новый год """
+# with open('class_scores.txt', encoding='utf-8') as input_file, open('new_scores.txt', 'a', encoding='utf-8') as output_file:
+#     input_lines = [line.strip().split() for line in input_file.readlines()]
+#     new_lines = []
+#     for line in input_lines:
+#         if int(line[1]) < 95:
+#             line[1] = str(int(line[1]) + 5)
+#         else:
+#             line[1] = '100'
+#         new_lines.append(f'{line[0]} {line[1]}')
+#     print(*new_lines, sep='\n', file=output_file)
+
+
+# """ Загадка от Жака Фреско 🌶️ """
+# with open('goats.txt', encoding='utf-8') as input_file, open('answer.txt', 'w',encoding='utf-8') as output_file:
+#     my_dict = {}
+#     input_file.readline().strip()
+#     colors = input_file.readline().strip()
+#     while colors != 'GOATS':
+#         my_dict[colors] = 0
+#         colors = input_file.readline().strip()
+#     goats = list(map(str.strip, list(input_file)))
+#     for i in my_dict:
+#         my_dict[i] += goats.count(i)
+#     print(*sorted(filter(lambda x: sum(my_dict.values()) * 0.07 < my_dict[x], my_dict)), sep='\n', file=output_file)
