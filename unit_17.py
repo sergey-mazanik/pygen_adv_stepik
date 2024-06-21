@@ -158,3 +158,8 @@
 #         result_dict = {k: v for k, v in zip(full_data[0], full_data[i])}
 #         result_list.append(result_dict)
 #     return result_list
+
+
+# """ Входная строка """
+# with open('test.txt', 'w', encoding='utf-8') as file:
+#     file.write(input())
