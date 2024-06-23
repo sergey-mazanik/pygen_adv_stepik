@@ -146,3 +146,21 @@
 #          'stepik.org', 'kotlin.ko', 'github.git']
 # my_set = {i.lower() for i in files if i.lower().endswith('.png')}
 # print(*sorted(my_set))
+
+
+# """ Счётчик верных решений ✅🌶️🌶️ """
+# correct_set = set()
+# wrong = 0
+# n = int(input())
+# for _ in range(n):
+#     name, result = input().split(': ')
+#     if result == 'Correct':
+#         correct_set.add(name)
+#     else:
+#         wrong += 1
+# if correct_set:
+#     count = int(100 - (wrong / n) * 100 + 0.5)
+#     print(f'''Верно решили {len(correct_set)} учащихся
+# Из всех попыток {count}% верных''')
+# else:
+#     print('Вы можете стать первым, кто решит эту задачу')
