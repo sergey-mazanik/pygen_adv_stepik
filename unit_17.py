@@ -206,3 +206,32 @@
 #     for i in my_dict:
 #         my_dict[i] += goats.count(i)
 #     print(*sorted(filter(lambda x: sum(my_dict.values()) * 0.07 < my_dict[x], my_dict)), sep='\n', file=output_file)
+
+
+# """ Конкатенация файлов 🌶️ """
+# lst = [input() for _ in range(int(input()))]
+# for i in lst:
+#     with open(i, encoding='utf-8') as input_file, open('output.txt', 'a', encoding='utf-8') as output_file:
+#         output_file.write(input_file.read())
+
+
+# """ Лог файл 🌶️ """
+#
+#
+# def time_in_minutes(time: str):
+#     hours, minutes = time.split(':')
+#     total_minutes = int(hours) * 60 + int(minutes)
+#     return total_minutes
+#
+#
+# with open('logfile.txt', encoding='utf-8') as input_file, open('output.txt', 'a', encoding='utf-8') as output_file:
+#     input_lines = [line.strip().split(', ') for line in input_file.readlines()]
+#     my_lst = []
+#     for line in input_lines:
+#         new_line = [line[0], time_in_minutes(line[2]) - time_in_minutes(line[1])]
+#         my_lst.append(new_line)
+#     names = []
+#     for i in my_lst:
+#         if i[1] > 59:
+#             names.append(i[0])
+#     print(*names, sep='\n', file=output_file)
